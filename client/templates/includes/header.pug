@@ -1,0 +1,22 @@
+//- includes/header.pug
+header#header
+	div.block-logo
+		a.logo(href='#')
+			img(src='../assets/img/logo.png')
+	div.burger
+		i.fas.fa-bars
+	- var values = ['Home', 'Work', 'About', 'Blog', 'Services', 'Contact'];
+	ul.nav
+		each val in values
+			li.nav-item
+				a(href='#')= val
+	div.filters
+		div.block-title
+			i.fab.fa-microsoft
+			| Filter
+		- var filters = ['all', 'design', 'illustration', 'photography', 'wallpapers', 'brochures'];
+		ul.filters_nav
+			each val in filters
+				li.filters_nav-item(data-index=val)
+					a(href='#')= val
+	div.copirate © 2014 Kappe, All Rights Reserved

@@ -1,0 +1,14 @@
+//- includes/content.pug
+main#main
+	mixin article(card)
+		.article(data-filer=card.filter)
+			.article-images(style='background-image: url(' + card.img +')')
+			.article-wrapper
+				.article-title=card.title
+				.article-text=card.descr
+				hr.article-line
+				a.article-link(href=card.link)
+					i.fas.fa-arrow-right
+
+	for card in cards
+		+article(card)
